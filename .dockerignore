@@ -1,0 +1,10 @@
+venv/
+__pycache__
+.git
+.gitignore
+app/faiss_index/
+app/data/
+.vscode/
+tests/
+.env
+.cache_data/
