@@ -34,8 +34,8 @@ The system follows a modular architecture:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/rag-telegram-bot.git
-   cd rag-telegram-bot
+   https://github.com/elahe-mohammadi/RAG_powered_Telegram_Bot.git
+   cd RAG_powered_Telegram_Bot
    ```
 
 2. Create a virtual environment:
