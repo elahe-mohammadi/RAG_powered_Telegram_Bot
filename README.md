@@ -20,8 +20,8 @@ The system follows a modular architecture:
 1. **Document Processing**: Text documents are loaded, split into chunks, and embedded
 2. **Vector Store**: Embeddings are indexed using FAISS for efficient similarity search
 3. **API Layer**: FastAPI provides HTTP endpoints for question answering
-4. **LLM Service**: openrouter API generate answers based on retrieved context
-5. **Telegram Integration**: Bot connects users with the backend system
+4. **LLM Service**: openrouter API generates answers based on retrieved context
+5. **Telegram Integration**: The Bot connects users with the backend system
 
 ## Setup Instructions
 
@@ -46,15 +46,15 @@ The system follows a modular architecture:
 
 3. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirement.txt
    ```
 
-4. Create a `.env` file, data folder and index folder:
+4. Create a `.env` file, `data` folder for txt documents, and `index` folder for faiss index :
    ```bash
    touch .env app/faiss_index app/data
    ```
 
-5. Configure your environment variables in the `.env` file:
+5. Configure your environment variables in the `.env` file similar to .env.example:
    - Add your Hugging Face API key (optional but recommended) or openrouter API token
    - Add your Telegram Bot Token (get one from @BotFather on Telegram)
    - Adjust other settings as needed
@@ -63,7 +63,7 @@ The system follows a modular architecture:
 
 7. Run the application:
    ```bash
-   uvicorn app.main:app --reload
+   uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
    ```
 
 ### Docker Setup
@@ -112,7 +112,7 @@ pytest tests/test_rag_api.py
 
 ### Reducing Latency
 - Uses FAISS for efficient vector similarity search
-- Initializes vector store at application startup
+- Initializes the vector store at application startup
 - Implements response caching for repeated questions
 
 ### Scaling Considerations
