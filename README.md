@@ -51,7 +51,7 @@ The system follows a modular architecture:
 
 4. Create a `.env` file, `data` folder for txt documents, and `index` folder for faiss index :
    ```bash
-   touch .env app/faiss_index app/data
+   touch .env app/data
    ```
 
 5. Configure your environment variables in the `.env` file similar to .env.example:
